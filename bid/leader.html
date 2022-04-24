@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bid Details</title>
+	<link rel="stylesheet" type="text/css" href="leader.css">
+</head>
+<body>
+<h1>Amount Bidded</h1>
+
+<div id="leaderboard"></div>
+<h1 id="abc"></h1>
+<form action="../leaderboard/leader.html">
+    <input type="submit" class="button" value="LeaderBoard">
+</form>
+
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDIVxZVoT4ejLio_O97LXxioAsiYJy9a_4",
+    authDomain: "technothrone-2a08c.firebaseapp.com",
+    databaseURL: "https://technothrone-2a08c.firebaseio.com",
+    projectId: "technothrone-2a08c",
+    storageBucket: "technothrone-2a08c.appspot.com",
+    messagingSenderId: "942084036665"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="leader.js"></script>
+</html>

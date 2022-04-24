@@ -1,0 +1,98 @@
+*,*:before,*:after {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-left:45%;
+	margin-right:0;
+	visibility: hidden;
+}
+body {
+	background:#e2d1d1;
+	text-shadow:1px 1px 1px #222;
+}
+h1{
+	text-align:center;
+	color:#031703;
+	font-family: Georgia;
+}
+#leaderboard{
+	position:relative;
+	width:400px;
+	border:3px solid #792020;
+	border-radius: 20px;
+	padding:10px;
+	background:#c38282;
+	left:50%;
+	margin-left:-200px;
+}
+#leaderboard ul{
+	position:relative;
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+#leaderboard ul li{
+	position:absolute;
+	display:block;
+	width:100%;
+	padding:10px;
+	border-radius:5px;
+	background: linear-gradient(to top,rgb(20,20,20) 0%, rgb(40,40,40) 100%);
+	border-bottom:1px solid #222;
+	border-top:1px solid #666;
+	box-shadow: 3px 3px 5px #000;
+	opacity: 1;
+	transition: top cubic-bezier(1.000, -0.530, 0.405, 1.425) 3s;
+}
+#leaderboard ul li a{
+	display: block;
+	text-decoration: none;
+	font-family:  sans-serif;
+	color:white;
+}
+#leaderboard ul li a:hover{
+	text-shadow: 0 0 10px rgb(230,230,255);
+}
+#leaderboard li span {
+	float:right;
+	color:white;
+	opacity: 1;
+	transition: opacity ease 3s;
+}
+#leaderboard li span:after {
+	content:' Coins';
+	color:#eeeeee;
+	font-size:10px;
+}
+#leaderboard .move{
+
+}
+
+#leaderboard .replace{
+	animation: replace 2s;
+	-webkit-animation: replace 2s;
+}
+#leaderboard .move span,#leaderboard .replace span{
+	opacity:0;
+}
+
+@keyframes replace
+{
+	0% {left: -500px;opacity:0;}
+	100% {left: 0px;opacity:1;}
+}
+@-webkit-keyframes replace
+{
+	0% {left: -500px;opacity:0;}
+	100% {left: 0px;opacity:1;}
+}
